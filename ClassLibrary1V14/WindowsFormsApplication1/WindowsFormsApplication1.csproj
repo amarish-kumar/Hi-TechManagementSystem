@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70B87586-0F15-42EF-A572-303F562E3149}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityFramework\Author.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\AuthorBook.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Book.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Category.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Client.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Employee.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\ModelEntityFramework.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntityFramework.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\ModelEntityFramework.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\ModelEntityFramework.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntityFramework.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Order.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\OrderLineBook.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\OrderLineSoftware.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Publisher.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Software.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\sysdiagram.cs">
+      <DependentUpon>ModelEntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ClientMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ClientMaintenance.Designer.cs">
+      <DependentUpon>ClientMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmployeeMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmployeeMaintenance.Designer.cs">
+      <DependentUpon>EmployeeMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLogIn.Designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormOrderBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormOrderBook.Designer.cs">
+      <DependentUpon>FormOrderBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormOrderMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormOrderMaintenance.Designer.cs">
+      <DependentUpon>FormOrderMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormOrderSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormOrderSoftware.Designer.cs">
+      <DependentUpon>FormOrderSoftware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPasswordChange.Designer.cs">
+      <DependentUpon>FormPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormProductMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormProductMaintenance.Designer.cs">
+      <DependentUpon>FormProductMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HiTechDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HiTechDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ClientMaintenance.resx">
+      <DependentUpon>ClientMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmployeeMaintenance.resx">
+      <DependentUpon>EmployeeMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormOrderBook.resx">
+      <DependentUpon>FormOrderBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormOrderMaintenance.resx">
+      <DependentUpon>FormOrderMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormOrderSoftware.resx">
+      <DependentUpon>FormOrderSoftware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormPasswordChange.resx">
+      <DependentUpon>FormPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormProductMaintenance.resx">
+      <DependentUpon>FormProductMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="EntityFramework\ModelEntityFramework.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelEntityFramework.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityFramework\ModelEntityFramework.edmx.diagram">
+      <DependentUpon>ModelEntityFramework.edmx</DependentUpon>
+    </None>
+    <None Include="HiTechDataSet.xsc">
+      <DependentUpon>HiTechDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HiTechDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HiTechDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HiTechDataSet.xss">
+      <DependentUpon>HiTechDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary_Connected_Mode.csproj">
+      <Project>{9db0738b-84b4-4cf4-958f-d2d37f9ba7a0}</Project>
+      <Name>ClassLibrary_Connected_Mode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary_Disconnected_Mode\ClassLibrary_Disconnected_Mode.csproj">
+      <Project>{4cb63a4a-c43d-4aa1-a1ca-99ebbc2e47ea}</Project>
+      <Name>ClassLibrary_Disconnected_Mode</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityFramework\ModelEntityFramework.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntityFramework.edmx</DependentUpon>
+      <LastGenOutput>ModelEntityFramework.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityFramework\ModelEntityFramework.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntityFramework.edmx</DependentUpon>
+      <LastGenOutput>ModelEntityFramework.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
